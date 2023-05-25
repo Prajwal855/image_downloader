@@ -13,7 +13,7 @@ image_url = [
 def download_image(image_url):
     image_bytes = requests.get(image_url).content
     image_name = image_url.split('/')[3]
-    image_name = f'{image_name}.mp4'
+    image_name = f'{image_name}.jpg'
     with open(image_name, 'wb') as image_files:
         image_files.write(image_bytes)
         print(f"{image_name} was downloaded")
